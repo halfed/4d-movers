@@ -2,3 +2,6 @@
 @import '~foundation-sites/scss/foundation';
 @include foundation-everything;
 
+body {
+	font-size: 15px;
+}

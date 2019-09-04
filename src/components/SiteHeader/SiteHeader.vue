@@ -6,6 +6,7 @@
     </div>
 
     <div class="nav-container">
+        
         <ul class="menu" data-dropdown-menu>
           <li>
             <router-link v-bind:to="'service'">Service Areas</router-link>
@@ -15,6 +16,7 @@
           </li>
           <li><router-link v-bind:to="'quote'">Request A Quote</router-link></li>
         </ul>
+        
     </div>
   </div>
 </template>
@@ -42,7 +44,23 @@
     display: none;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (max-width: 320px) {
+    .title-bar {
+      top: -83px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) and (min-width: 376px) {
+    .title-bar {
+      top: -108px;
+    }
+
+    .nav-container {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-width: 769px) {
     .title-bar {
       display:none;
     }
@@ -77,3 +95,14 @@
     }
   }
 </style>
+
+
+<!-- /// 850 427 8800 
+//info@4Dlocalmovers.com -->
+
+
+
+    <!-- float: right;
+    position: relative;
+    left: 433px;
+    top: 16px; -->

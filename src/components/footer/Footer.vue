@@ -35,6 +35,12 @@
 </script>
 
 <style lang="scss" scoped>
+	@media only screen and (max-width: 320px) {
+		.grid-margin-x {
+			margin: 0;
+			padding: 0;
+		}
+	}
 	  .grid-container {
 	    background-color: #173D6F;
 	    color: #FFF;
@@ -83,6 +89,7 @@
 	.footer-bottom {
 		text-align: center;
     	font-size: 0.8rem;
+    	padding-top: 10px;
 
     	a {
     		text-decoration: underline;
@@ -93,5 +100,13 @@
     		font-size: 0.6rem;
     		padding: 0 5px 0 0;
     	}
+	}
+
+	@media only screen and (min-width: 768px) {
+		.footer-container {
+			.footer-content {
+				border-right: 1px solid rgba(255, 255, 255, 0.10);
+			}
+		}
 	}
 </style>
