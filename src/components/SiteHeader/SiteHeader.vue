@@ -9,12 +9,12 @@
         
         <ul class="menu" data-dropdown-menu>
           <li>
-            <router-link v-bind:to="'service'">Service Areas</router-link>
+            <router-link v-bind:to="'/dev/services'">Service Areas</router-link>
           </li>
           <li>
-            <router-link v-bind:to="'about-us'">About Us</router-link>
+            <router-link v-bind:to="'/dev/about-us'">About Us</router-link>
           </li>
-          <li><router-link v-bind:to="'quote'">Request A Quote</router-link></li>
+          <li><router-link v-bind:to="'/dev/request-quote'">Request A Quote</router-link></li>
         </ul>
         
     </div>

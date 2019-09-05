@@ -6,15 +6,15 @@
 	      <nav id="menu" class="grid-x grid-padding-x">
 	      	<div class="cell medium-12 slid-nav-container">
 	      		<ul>
-	      			<li>Service Areas</li>
-	      			<li>About Us</li>
-	      			<li>Request A Quote</li>
+	      			<li><router-link v-bind:to="'services'">Service Areas</router-link></li>
+	      			<li><router-link v-bind:to="'about-us'">About Us</router-link></li>
+	      			<li><router-link v-bind:to="'request-quote'">Request A Quote</router-link></li>
 	      		</ul>
 	      	</div>
 	        
 	      </nav>
 	      <main id="panel">
-	      	<div class="test"><router-link v-bind:to="'home'"><img src="../../assets/movers-logo.png"></router-link>
+	      	<div class="test"><router-link v-bind:to="'/dev'" className="image-link"><img src="../../assets/movers-logo.png"></router-link>
 			<h1>4th DIMENSION PRO MOVERS</h1>
 			<h2>Apartments | Residence | Military</h2></div>
 	        
@@ -46,6 +46,9 @@
 	.grid-container {
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.image-link {
+		cursor: pointer;
 	}
 	.main {
 		h1 {
