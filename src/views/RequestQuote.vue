@@ -18,11 +18,11 @@
 					</div>
 
 					<div class="grid-x grid-margin-x">
-						<div class="cell small-5">
+						<div class="cell small-12 large-5">
 							<label for="email">Email</label>
 							<input type="text" name="email" id="email" class="email" />
 						</div>
-						<div class="cell small-5">
+						<div class="cell small-12 large-5">
 							<label for="phone">Phone</label>
 							<input type="number" name="phone" id="phone" class="phone" />
 						</div>
