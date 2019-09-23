@@ -5,7 +5,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 /test/unit/coverage/
-/dev/
+dev/*
+vendor/*
+build/
 
 # Editor directories and files
 .idea
@@ -15,4 +17,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 .vs
+index.php
+
 
