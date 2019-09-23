@@ -8,6 +8,8 @@ yarn-error.log*
 dev/*
 vendor/*
 build/
+4d-assets/
+mailoutput/
 
 # Editor directories and files
 .idea
@@ -18,5 +20,6 @@ build/
 *.sln
 .vs
 index.php
+retina-test.js
 
 
