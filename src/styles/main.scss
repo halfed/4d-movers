@@ -5,3 +5,26 @@
 body {
 	font-size: 15px;
 }
+
+select {
+	border-radius: 5px;
+}
+
+.input-error {
+	label {
+		color: $warning;
+		font-weight: 700;
+	}
+
+	input, textarea, select {
+		border-color: $warning;
+	}
+
+	.form-error {
+		display: block;
+	}
+}
+
+.off-canvas-absolute {
+	background-color: #333333;
+}

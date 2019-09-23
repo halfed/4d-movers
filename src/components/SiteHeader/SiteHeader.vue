@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-      <button class="menu-icon toggle-button" type="button" data-toggle></button>
+      <button class="menu-icon toggle-button" type="button" @click="toggleHandler"></button>
       <div class="title-bar-title">Menu</div>
     </div>
 
@@ -24,11 +24,16 @@
 <script>
   export default {
     name: 'site-header',
+    props:['toggleHandler'],
     data() {
       return {
       }
     },
     methods: {
+      toggleSlideHandler() {
+        console.log("toggling");
+          ///this.slideout = !this.slideout;
+        }
     }
   }
 </script>
@@ -99,6 +104,8 @@
 
 <!-- /// 850 427 8800 
 //info@4Dlocalmovers.com -->
+
+<!-- TERMS https://app.termly.io/document/terms-of-use-for-website/dda79ee5-aafe-4339-8658-803a3296d604  -->
 
 
 

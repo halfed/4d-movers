@@ -2,27 +2,61 @@
 	<div class="grid-container fluid main">
 		
 
-		<Slideout menu="#menu" panel="#panel" :toggleSelectors="['.toggle-button']" @on-open="open">
+		<div class="off-canvas-wrapper">
 	      <nav id="menu" class="grid-x grid-padding-x">
-	      	<div class="cell medium-12 slid-nav-container">
-	      		<ul>
-	      			<li><router-link v-bind:to="'services'">Service Areas</router-link></li>
-	      			<li><router-link v-bind:to="'about-us'">About Us</router-link></li>
-	      			<li><router-link v-bind:to="'request-quote'">Request A Quote</router-link></li>
+	      	<div 
+	      		class="cell medium-12 slid-nav-container off-canvas-absolute position-left is-transition-push" 
+	      		v-bind:class="[slideout ? 'is-open' : 'is-closed']" 
+	      		id="offCanvasLeftSplit" 
+	      		data-off-canvas
+	      	>
+	      		<button class="close-toggle" @click="toggleSlidOutHandler">X</button>
+		        <ul>
+	      			<li @click="toggleSlidOutHandler">
+	      				<router-link 
+	      					v-bind:to="'/dev/services'"
+
+	      				>Service Areas</router-link>
+	      			</li>
+	      			<li @click="toggleSlidOutHandler">
+	      				<router-link 
+	      				v-bind:to="'about-us'"
+	      			>About Us</router-link>
+	      			</li>
+	      			<li @click="toggleSlidOutHandler">
+	      				<router-link 
+	      					v-bind:to="'request-quote'"
+	      				>Request A Quote</router-link>
+	      			</li>
 	      		</ul>
-	      	</div>
+		    </div>
 	        
 	      </nav>
+
+
 	      <main id="panel">
-	      	<div class="test"><router-link v-bind:to="'/dev'" className="image-link"><img src="../../assets/movers-logo.png"></router-link>
-			<h1>4th DIMENSION PRO MOVERS</h1>
-			<h2>Apartments | Residence | Military</h2></div>
+	      	<div 
+	      		class="off-canvas-content"
+	      		v-bind:class="[slideout ? 'is-open-left has-transition-push has-position-left' : '']"
+	      		data-off-canvas-content
+	      	>
+	      		<router-link v-bind:to="'/dev'" className="image-link">
+	      			<img src="../../assets/movers-logo.png">
+	      		</router-link>
+				<h1>4th DIMENSION PRO MOVERS</h1>
+				<h2>Apartments | Residence | Military</h2>
+			</div>
 	        
-			<site-header/>
+			<site-header
+				:toggleHandler="toggleSlidOutHandler"
+			/>
 			<router-view></router-view>
-			<footer-content>test</footer-content>
+			<footer-content/>
 	      </main>
-	    </Slideout>
+
+
+
+	    </div>
 	</div>
 
 </template>
@@ -31,12 +65,14 @@
 	import Slideout from 'vue-slideout'
 	export default {
 		name: 'home',
-		components: {
-	      Slideout
+		data() {
+			return {
+				slideout: false
+			}
 	    },
 	    methods: {
-	      open: function () {
-	        console.log('slideoutOpen')
+	      toggleSlidOutHandler() {
+	      	this.slideout = !this.slideout;
 	      }
 	    }
 	}
@@ -68,7 +104,7 @@
 		    position: relative;
 		    padding-left: 20px;
 		    font-size: 1.3rem;
-		    font-weight: 700;
+		    font-weight: 500;
     		top: 41px;
 		}
 	}
@@ -88,7 +124,7 @@
 	}
 
 	@media only screen and (max-width: 768px) and (min-width: 376px) {
-		.test {
+		.off-canvas-content {
 			background-image: url("../../assets/background-img.png");
 			background-repeat: repeat-x;
 		}
@@ -118,7 +154,7 @@
 	}
 
 	@media only screen and (min-width: 769px) {
-		.test {
+		.off-canvas-content {
 			background-image: url("../../assets/background-img.png");
 			background-repeat: repeat-x;
 		}

@@ -4,37 +4,48 @@
 			<div class="cell small-12 medium-6 footer-content">
 		        <p>Let us take care of your move while you focus on your move</p>
 		        <p>
-		          Request A <a href="#">Quote</a>
+		          Request A <router-link v-bind:to="'/dev/request-quote'" @click.native="clickLink">Quote</router-link>
 		        </p>
 			</div>
 			<div class="cell small-12 medium-6">
 				<ul class="footer-link-container">
 					<li class="footer-link-nav">
-						Service
-						<ul class="footer-link-sub-container">
-							<li class="sub-footer-link">Moving</li>
-						</ul>
+						<router-link v-bind:to="'/dev/services'" @click.native="clickLink">Service</router-link>
 					</li>
-					<li class="footer-link-nav">Company</li>
-					<li class="footer-link-nav">Quote</li>
+					<li class="footer-link-nav"><router-link v-bind:to="'/dev/about-us'" @click.native="clickLink">About Us</router-link></li>
+					<li class="footer-link-nav"><router-link v-bind:to="'/dev/request-quote'" @click.native="clickLink">Quote</router-link></li>
 				</ul>
 			</div>
 		</div>
+		<div class="social-icons">
+			<router-link v-bind:to="'/dev/about-us'" class="facebook"><span class="hide-text">Facebook</span></router-link>
+			<router-link v-bind:to="'/dev/about-us'" class="instagram"><span class="hide-text">Instagram</span></router-link>
+		</div>
 	    <div class="footer-bottom">
-	      <p>Serving: Denver Colorado, Florida</p>
-	      <p>123 address lane Fl 80023 | Main (850) 427 8800 <a href="mailto:info@4dlocalmovers.com?subject=Mail from 4D Local Movers App">info@4Dlocalmovers.com</a> </p>
-	      <p><a href="#">Privacy Policy </a><span class="copy-format">&copy; 2019 4th Dimension Pro Movers</span></p>
+	      <p>Serving: Denver Colorado, Gulf Breeze Florida</p>
+	      <p>5053 Ring Rose Court Fl Gulf Breeze FL 32563 <br/> Main (850) 427 8800</p>
+	      <p>765 S Lafayette Dr. Lafayette CO 80026</p> <a href="mailto:info@4dlocalmovers.com?subject=Mail from 4D Local Movers App">info@4Dlocalmovers.com</a> </p>
+	      <p class="lower-font"><a href="https://app.termly.io/document/privacy-policy/46d47efe-0a29-4bc8-8ee1-35030bc5db76" target="_blank">Privacy Policy </a><span class="copy-format">&copy; 2019 4th Dimension Pro Movers</span></p>
 	    </div>
 	</footer>
 </template>
 
 <script>
 	export default {
-		name: 'footer-content'
+		name: 'footer-content',
+		methods: {
+			clickLink() {
+				window.scrollTo({top:0});
+			}
+		}
 	}
 </script>
 
 <style lang="scss" scoped>
+	.lower-font {
+		font-size: 0.6em;
+	}
+
 	@media only screen and (max-width: 320px) {
 		.grid-margin-x {
 			margin: 0;
@@ -86,9 +97,35 @@
 		}
 	}
 
+	.facebook {
+		background: url('../../assets/social-icons-retina.png') no-repeat 11.838% 80.711%;
+		background-size: 200px 138px;
+		width: 40px;
+		height: 40px;
+		margin-right: 30px;
+	}
+
+	.instagram {
+		background: url('../../assets/social-icons-retina.png') no-repeat 88.162% 80.711%;
+		background-size: 200px 138px;
+		width: 40px;
+		height: 40px;
+	}
+
+	.social-icons {
+		display: flex;
+		justify-content: center;
+	}
+
+	.hide-text {
+		line-height: 0; 
+    	font-size: 0;
+    	color: transparent; 
+	}
+
 	.footer-bottom {
 		text-align: center;
-    	font-size: 0.8rem;
+    	font-size: 1.0rem;
     	padding-top: 10px;
 
     	a {
@@ -108,5 +145,15 @@
 				border-right: 1px solid rgba(255, 255, 255, 0.10);
 			}
 		}
+
+		.footer-bottom {
+	    	font-size: 0.8rem;
+		}
+
+		
+
+		
+
+		
 	}
 </style>

@@ -12,6 +12,7 @@
 
 <style lang="scss">
 @import './styles/main';
+
 .app-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -62,7 +63,7 @@
 
     ul {
     	margin-left: 0;
-    	padding-top: 60px;
+    	padding-top: 40px;
     	
     	li {
 	    	list-style-type: none;
@@ -70,6 +71,14 @@
 	    	cursor: pointer;
 	    	border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 	    }
+    }
+
+    .close-toggle {
+      text-align: right;
+      font-weight: 600;
+      padding-top: 20px;
+      cursor: pointer;
+      color: #FFFFFF;
     }
 }
 </style>

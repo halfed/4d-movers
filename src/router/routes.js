@@ -1,11 +1,11 @@
-import Home from '@/views/layout/Home'
+import Layout from '@/views/layout/Layout'
 import views from '@/views';
 import HelloWorld from '@/components/HelloWorld';
 
 export default [
     {
       path: '/dev/',
-      component: Home,
+      component: Layout,
       meta: { auth: true },
       children: [
         {
