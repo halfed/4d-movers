@@ -1,12 +1,6 @@
 <template>
-  <div>
-    <div class="title-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-      <button class="menu-icon toggle-button" type="button" @click="toggleHandler"></button>
-      <div class="title-bar-title">Menu</div>
-    </div>
-
+  <div class="">
     <div class="nav-container">
-        
         <ul class="menu" data-dropdown-menu>
           <li>
             <router-link v-bind:to="'/dev/services'">Service Areas</router-link>
@@ -16,25 +10,17 @@
           </li>
           <li><router-link v-bind:to="'/dev/request-quote'">Request A Quote</router-link></li>
         </ul>
-        
+        <div class="">
+          <span><a href="mailto:info@4dlocalmovers.com?subject=Mail from 4D Local Movers App">info@4Dlocalmovers.com</a></span>
+          <span>850-427-8800</span>
+        </div>
     </div>
   </div>
 </template>
   
 <script>
   export default {
-    name: 'site-header',
-    props:['toggleHandler'],
-    data() {
-      return {
-      }
-    },
-    methods: {
-      toggleSlideHandler() {
-        console.log("toggling");
-          ///this.slideout = !this.slideout;
-        }
-    }
+    name: 'site-header'
   }
 </script>
 
@@ -89,6 +75,19 @@
           }
         }
       }
+
+      span {
+        float: right;
+        position: relative;
+        top: -28px;
+        padding-right: 20px;
+        color: #FFFFFF;
+        font-weight: 700;
+
+        a {
+          color: #FFFFFF;
+        }
+      }
     }
     .js-dropdown-active {
       display: none;
@@ -97,6 +96,9 @@
       .js-dropdown-active {
         display: block;
       }
+    }
+    .nav-containers {
+      background-color: #bbc4db;
     }
   }
 </style>
