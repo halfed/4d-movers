@@ -25,6 +25,11 @@ select {
 	}
 }
 
+.alert-message {
+	color: $warning;
+	font-weight: 600;
+}
+
 .off-canvas-absolute {
 	background-color: #333333;
 }
