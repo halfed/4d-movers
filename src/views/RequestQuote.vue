@@ -22,7 +22,7 @@
 					<div class="grid-x grid-margin-x">
 						<div class="cell small-12 large-5" :class="{'input-error': $v.email.$error}">
 							<label for="email">Email</label>
-							<input type="text" name="email" id="email" class="email" v-model="email" />
+							<input type="email" name="email" id="email" class="email" v-model="email" />
 							<div class="form-error" v-if="!this.$v.email.required">Email Required</div>
 							<div class="form-error" v-if="!this.$v.email.email">Valid Email Required</div>
 						</div>
@@ -177,7 +177,11 @@
 						<span>I agree to the <a href="https://app.termly.io/document/terms-of-use-for-website/dda79ee5-aafe-4339-8658-803a3296d604" target="_blank">Terms</a> and <a href="https://app.termly.io/document/privacy-policy/46d47efe-0a29-4bc8-8ee1-35030bc5db76" target="_blank">Privacy Policy</a></span>
 						<div class="form-error" v-if="!this.$v.terms.required">Required</div>
 					</div>
-					<button type="submit" class="button">Submit</button>
+					<button type="submit" class="button" :disabled="disableButton">Submit</button>
+					<p class="alert-message" v-if="displayMessage === 'ERROR'">Please fill the form correctly.</p>
+  					<p class="" v-if="displayMessage === 'OK'">Thanks for your submission! We will contact you to set up your move.</p>
+  					<p class="" v-if="displayMessage === 'PENDING'">Sending...</p>
+  					<p class="" v-if="displayMessage === 'ERR'">{{ errorStatus }}</p>
 				</form>
 			</div>
 		</div>
@@ -624,6 +628,7 @@
 				inventory: '',
 				questions: '',
 				terms: '',
+				disableButton: false,
 				payload: {}
 			}
 		},
@@ -690,6 +695,14 @@
 	    		required
 	    	}
 	  	},
+	  	computed: {
+	  		displayMessage() {
+	  			return this.$store.state.mainStore.submitStatus;
+	  		},
+	  		errorStatus() {
+	  			return this.$store.state.mainStore.returnMessage;
+	  		}
+	  	},
 		methods: {
 			...mapActions({
 		        postForm: 'postFormdata'
@@ -697,30 +710,35 @@
 			submitForm(event) {
 				event.preventDefault();
 				this.$v.$touch();
-				this.payload["firstName"] = this.firstName;
-				this.payload["lastName"] = this.lastName;
-				this.payload["email"] = this.email;
-				this.payload["phone"] = this.phone;
-				this.payload["addressPickUp"] = this.addressPickUp;
-				this.payload["addressPickUp2"] = this.addressPickUp2;
-				this.payload["picUpCity"] = this.picUpCity;
-				this.payload["pickUpState"] = this.pickUpStateSelected;
-				this.payload["pickUpZip"] = this.pickUpZip;
-				this.payload["addressDropOff"] = this.addressDropOff;
-				this.payload["addressDropOff2"] = this.addressDropOff2;
-				this.payload["dropOffCity"] = this.dropOffCity;
-				this.payload["dropOffState"] = this.dropOffStateSelected;
-				this.payload["dropOffZip"] = this.dropOffZip;
-				this.payload["startDate"] = this.startDate;
-				this.payload["hour"] = this.hourSelected;
-				this.payload["minute"] = this.minuteSelected;
-				this.payload["dayType"] = this.dayTypeSelected;
-				this.payload["squareFootage"] = this.squareFootage;
-				this.payload["inventory"] = this.inventory;
-				this.payload["questions"] = this.questions;
-				this.payload["terms"] = this.terms;
 
-				this.postForm(this.payload);
+				if (this.$v.$invalid) {
+			        this.$store.state.mainStore.submitStatus = 'ERROR'
+			    } else {
+			        // do your submit logic here
+			          	this.payload["firstName"] = this.firstName;
+						this.payload["lastName"] = this.lastName;
+						this.payload["email"] = this.email;
+						this.payload["phone"] = this.phone;
+						this.payload["addressPickUp"] = this.addressPickUp;
+						this.payload["addressPickUp2"] = this.addressPickUp2;
+						this.payload["picUpCity"] = this.picUpCity;
+						this.payload["pickUpState"] = this.pickUpStateSelected;
+						this.payload["pickUpZip"] = this.pickUpZip;
+						this.payload["addressDropOff"] = this.addressDropOff;
+						this.payload["addressDropOff2"] = this.addressDropOff2;
+						this.payload["dropOffCity"] = this.dropOffCity;
+						this.payload["dropOffState"] = this.dropOffStateSelected;
+						this.payload["dropOffZip"] = this.dropOffZip;
+						this.payload["startDate"] = this.startDate;
+						this.payload["hour"] = this.hourSelected;
+						this.payload["minute"] = this.minuteSelected;
+						this.payload["dayType"] = this.dayTypeSelected;
+						this.payload["squareFootage"] = this.squareFootage;
+						this.payload["inventory"] = this.inventory;
+						this.payload["questions"] = this.questions;
+						this.payload["terms"] = this.terms;
+						this.postForm(this.payload);
+			    }
 			}
 		}
 	}
