@@ -3,9 +3,9 @@ const urlBase = 'https://4dlocalmovers.com/cgi-bin/getFormData.php';
 const url = {
   postToForm: urlBase + '/form'
 }
-//const urlBase = 'http://localhost:8080/scripts/getFormData.php';
 export const postFormdata = ({commit}, {firstName, lastName, email, phone, addressPickUp, addressPickUp2, picUpCity, pickUpState, pickUpZip, addressDropOff, addressDropOff2, dropOffCity, dropOffState, dropOffZip, startDate, hour, minute, dayType, squareFootage, inventory, questions, terms }) => {
-	axios.post(url.postToForm, {
+	commit('changeSubmitStatus', 'PENDING');
+    axios.post(url.postToForm, {
     	firstName: firstName, 
     	lastName: lastName, 
     	email: email, 
@@ -30,9 +30,13 @@ export const postFormdata = ({commit}, {firstName, lastName, email, phone, addre
     	terms: terms
     })
   	.then(function (response) {
+        commit('changeSubmitStatus', 'OK');
     	console.log(response);
+
   	})
   	.catch(function (error) {
+        commit('changeSubmitStatus', 'ERR');
+        commit('changeStatusMessage', error);
     	console.log(error);
   	});
 }

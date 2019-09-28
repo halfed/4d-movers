@@ -7,9 +7,8 @@ import * as getters from "./getters"
 //TO THE MUTATION METHOD THAT RESETS ALL PROPERTIES.
 export const getInitialState = () => {
   return {
-    payloadData: {
-    	firstName: ''
-    }
+  	submitStatus: null,
+  	returnMessage: ''
   }
 }
 
