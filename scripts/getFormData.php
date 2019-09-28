@@ -7,9 +7,9 @@ $app = new \Slim\Slim();
 
 $app->post('/form', function () use ($app) {
     $headers = $app->request->headers;
-	$host = $app->request->headers->get('Host');
+    $host = $app->request->headers->get('Host');
     if($host === "4dlocalmovers.com") {
-    	$emailSubject = 'Customer Has a Question!';
+        $emailSubject = 'Customer Has a Question!';
         $webMaster = 'ddyytsbv49cd@a2plcpnl0300.prod.iad2.secureserver.net';
         require './formBody.php';
         $headers = "Content-type: text/html\r\n";
@@ -21,7 +21,7 @@ $app->post('/form', function () use ($app) {
             $app->halt(500, "We're having technical dificulties.  Please try again later, or contact us directly by phone.");
         }
     }else {
-    	$app->pass();
+        $app->pass();
     }
 });
 
