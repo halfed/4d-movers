@@ -174,7 +174,7 @@
 					</div>
 					<div class="terms" :class="{'input-error': $v.terms.$error}">
 						<input type="checkbox" name="terms" id="terms" v-model="terms" />
-						<span>I agree to the <a href="https://app.termly.io/document/terms-of-use-for-website/dda79ee5-aafe-4339-8658-803a3296d604" target="_blank">Terms</a> and <a href="https://app.termly.io/document/privacy-policy/46d47efe-0a29-4bc8-8ee1-35030bc5db76" target="_blank">Privacy Policy</a></span>
+						<span>I agree to the <a href="https://app.termly.io/document/privacy-policy/46d47efe-0a29-4bc8-8ee1-35030bc5db76" target="_blank">Privacy Policy</a></span>
 						<div class="form-error" v-if="!this.$v.terms.required">Required</div>
 					</div>
 					<button type="submit" class="button" :disabled="disableButton">Submit</button>
