@@ -16,12 +16,12 @@
 	      			</li>
 	      			<li @click="toggleHandler">
 	      				<router-link 
-	      				v-bind:to="'about-us'"
+	      				v-bind:to="'/dev/about-us'"
 	      			>About Us</router-link>
 	      			</li>
 	      			<li @click="toggleHandler">
 	      				<router-link 
-	      					v-bind:to="'request-quote'"
+	      					v-bind:to="'/dev/request-quote'"
 	      				>Request A Quote</router-link>
 	      			</li>
 	      		</ul>
@@ -39,12 +39,12 @@
 	      		</div>
 	      		<div class="cell large-6 medium-12 small-12">
 	      			<div class="menu-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-				      	<button class="menu-icon toggle-button" type="button" @click="toggleHandler"></button>
-				      	<div class="title-bar-title">Menu</div>
+				      	<button class="toggle-button" type="button" @click="toggleHandler">Menu</button>
+				      	<div class="title-bar-title"><router-link v-bind:to="'/dev/request-quote'" @click.native="clickLink">Request A Quote</router-link></div>
 				          <span>850-427-8800</span>
 				    </div>
 	      			<h1>4th DIMENSION PRO MOVERS</h1>
-					<h2>Apartments | Residence | Military</h2>
+					<h2>Residence | Apts | Military | Commercial Cartage</h2>
 	      		</div>
 			</div>
 			<site-header />
@@ -73,6 +73,18 @@
 </script>
 
 <style lang="scss" scoped>
+	.title-bar-title a {
+		color: #FFFFFF;
+		text-decoration: underline;
+		top: -1px;
+    	position: relative;
+	}
+
+	.toggle-button {
+		color: #FFFFFF;
+		font-weight: 700;
+	}
+
 	.grid-container {
 		padding-left: 0;
 		padding-right: 0;
@@ -110,7 +122,15 @@
 
 		h2 {
 			text-align: center;
-			font-size: 1.4rem;
+			font-size: 1.5rem;
+		}
+	}
+
+	@media only screen and (max-width: 376px) {
+		.main {
+			h2 {
+				font-size: 1.0rem;
+			}
 		}
 	}
 
@@ -148,7 +168,7 @@
 			h2 {
 				text-align: left;
 			    top: 25%;
-			    font-size: 2.0rem;
+			    font-size: 1.4rem;
 			    position: relative;
 			}
 		}
