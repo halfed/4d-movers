@@ -42,7 +42,7 @@
   }
  
   .slideout-panel {
-    background-color: #FFF;
+    background-color: #FFFFFF;
   }
  
   .slideout-open,
@@ -78,7 +78,7 @@
       font-weight: 600;
       padding-top: 20px;
       cursor: pointer;
-      color: #FFFFFF;
+      color: $white;
     }
 }
 </style>
