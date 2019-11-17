@@ -22,9 +22,10 @@
 			<router-link v-bind:to="'/dev/about-us'" class="instagram"><span class="hide-text">Instagram</span></router-link>
 		</div>
 	    <div class="footer-bottom">
-	      <p>Serving: Denver Colorado, Gulf Breeze Florida</p>
-	      <p>5053 Ring Rose Court Fl Gulf Breeze FL 32563 <br/> Main (850) 427 8800</p>
-	      <p>765 S Lafayette Dr. Lafayette CO 80026</p> <a href="mailto:info@4dlocalmovers.com?subject=Mail from 4D Local Movers App">info@4Dlocalmovers.com</a> </p>
+	      <p>Serving from Mobile Al to Panama City Fla and areas in between</p>
+	      <p>5053 Ring Rose Court Fl Gulf Breeze FL 32563 </p>
+	      <p class="left-inline-block"> Main (850) 427 8800</p>
+	      <a class="right-inline-block" href="mailto:info@4dlocalmovers.com?subject=Mail from 4D Local Movers App">info@4Dlocalmovers.com</a> </p>
 	      <p class="lower-font"><a href="https://app.termly.io/document/privacy-policy/46d47efe-0a29-4bc8-8ee1-35030bc5db76" target="_blank">Privacy Policy </a><span class="copy-format">&copy; 2019 4th Dimension Pro Movers</span></p>
 	    </div>
 	</footer>
@@ -43,7 +44,7 @@
 
 <style lang="scss" scoped>
 	.lower-font {
-		font-size: 0.6em;
+		font-size: 0.8rem;
 	}
 
 	@media only screen and (max-width: 320px) {
@@ -52,11 +53,12 @@
 			padding: 0;
 		}
 	}
-	  .grid-container {
-	    background-color: #173D6F;
-	    color: #FFF;
-	    height: 100%;
-	  }
+
+  	.grid-container {
+    	background-color: #173D6F;
+    	color: #FFF;
+    	height: 100%;
+  	}
 
 	.footer-container {
 		padding-top: 60px;
@@ -98,7 +100,7 @@
 	}
 
 	.facebook {
-		background: url('../../assets/social-icons-retina.png') no-repeat 11.838% 80.711%;
+		background: url("../../assets/social-icons-retina.png") no-repeat 11.838% 80.711%;
 		background-size: 200px 138px;
 		width: 40px;
 		height: 40px;
@@ -126,7 +128,7 @@
 	.footer-bottom {
 		text-align: center;
     	font-size: 1.0rem;
-    	padding-top: 10px;
+    	padding: 10px 15px 0 15px;
 
     	a {
     		text-decoration: underline;
@@ -134,9 +136,18 @@
     	}
 
     	.copy-format {
-    		font-size: 0.6rem;
+    		font-size: 0.8rem;
     		padding: 0 5px 0 0;
     	}
+	}
+
+	.left-inline-block, .right-inline-block {
+		display: inline-block;
+		font-size: 1.2rem;
+	}
+
+	.left-inline-block {
+		margin-right: 7px;
 	}
 
 	@media only screen and (min-width: 768px) {
@@ -150,10 +161,13 @@
 	    	font-size: 0.8rem;
 		}
 
-		
+		.left-inline-block {
+			display: inline-block;
+			margin-right: 7px;
+		}
 
-		
-
-		
+		.right-inline-block {
+			display: inline-block;
+		}
 	}
 </style>
