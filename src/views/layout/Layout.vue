@@ -47,7 +47,7 @@
 					<h2>Residence | Apts | Military | Commercial Cartage</h2>
 	      		</div>
 			</div>
-			<site-header />
+			<top-nav />
 			<router-view></router-view>
 			<footer-content/>
 	      </main>

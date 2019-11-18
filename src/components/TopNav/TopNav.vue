@@ -20,7 +20,7 @@
   
 <script>
   export default {
-    name: 'site-header'
+    name: 'top-nav'
   }
 </script>
 
