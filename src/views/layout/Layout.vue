@@ -28,7 +28,7 @@
 		    </div>
 	      </nav>
 	      <main id="panel">
-	      	<div 
+	      	<header 
 	      		class="off-canvas-content grid-x"
 	      		v-bind:class="[slideout ? 'is-open-left has-transition-push has-position-left' : '']"
 	      	>
@@ -46,7 +46,7 @@
 	      			<h1>4th DIMENSION PRO MOVERS</h1>
 					<h2>Residence | Apts | Military | Commercial Cartage</h2>
 	      		</div>
-			</div>
+			</header>
 			<top-nav />
 			<router-view></router-view>
 			<footer-content/>
