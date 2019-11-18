@@ -1,7 +1,7 @@
 <template>
 	<div class="grid-container fluid main">
 		<div class="off-canvas-wrapper">
-	      <nav id="menu" class="grid-x grid-padding-x">
+	      <nav id="menu" aria-label="mobile side nav" class="grid-x grid-padding-x">
 	      	<div 
 	      		class="cell medium-12 slid-nav-container off-canvas-absolute position-left is-transition-push" 
 	      		v-bind:class="[slideout ? 'is-open' : 'is-closed']" 
