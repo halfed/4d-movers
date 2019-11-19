@@ -2,9 +2,7 @@
 	<page-body>
 		<h3>About Us</h3>
 		<p class="body-paragraph">
-			Bayside Moving began in 2011 in gulf breeze florida as a small local moving company. We began our business with two men and a pick-up truck and are quickly growing with more trusted crews and moving trucks. Bayside’s business has been built of 5-Star Reviews and word of mouth in Gulf Breeze and surrounding communities.
-
-            Our company location is based out of Gulf Breeze, FL and covers all surrounding areas from Mobile, Gulf Shores, Orange Beach, Perdido Key, Pensacola, Navarre, Fort Walton, Destin, Shalimar, Niceville, and Crestview. We also do long distance moves servicing the entire nation.
+			Our company started from a successful sister company who’s success was generated from taking care of people’s needs. 4D Pro Movers was developed from the assessed need that was discovered here in the Florida panhandle area, for moving personnel who cared for people and showed it in how they work and treat people. A small fleet of trucks were purchased and a new company blossomed. Our coverage area spans from Mobile Alabama east to Panama City and all in between. We have the capability to transport nationwide and even worldwide.
 		</p>
 	</page-body>
 </template>
