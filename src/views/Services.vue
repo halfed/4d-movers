@@ -2,7 +2,7 @@
 	<page-body>
 		<h3>Services</h3>
 		<p class="body-paragraph">
-			For local moves our in house trained crew will carefully wrap all your furniture in blankets before ever leaving your house to protect your valuable belongings. We will take care of the disassembly of all your larger furniture like wooden bed frames or multiple piece dining room furniture. We pride ourselves on our timeliness, speed and efficiency but on top of that, we command a friendly and courteous crew to attend to all your needs. Our goal is to take all the worry out of moving to make you feel as comfortable as possible. Depending on job size, our crews are typically quick enough to perform two jobs in one day, so we can work around your schedule to accommodate your needs!
+			For all of your moving needs, professionalism, safety, and the ultimate protection of your goods and valuables, is of top priority to us. All of our service reps are trained and tested to ensure you receive the best care and attention you deserve. We want to take all the pressure of a move off of your shoulders and place it in the hands of our experienced team. Our attention to detail includes….dissasembling furniture and hardware, wrapping packing and strapping every item, and a complete home sweep! (Which includes cleaning all debris off the floor of the home or structure) We can do same day moves, scheduled moves, and be as flexible as you need us to be! We look forward to meeting you and exceed your expectations!
 		</p>
 	</page-body>
 </template>
