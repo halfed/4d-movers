@@ -3,12 +3,12 @@
     <div class="nav-container">
         <ul class="menu" data-dropdown-menu>
           <li>
-            <router-link v-bind:to="'/dev/services'">Service Areas</router-link>
+            <router-link v-bind:to="'/services'">Service Areas</router-link>
           </li>
           <li>
-            <router-link v-bind:to="'/dev/about-us'">About Us</router-link>
+            <router-link v-bind:to="'/about-us'">About Us</router-link>
           </li>
-          <li><router-link v-bind:to="'/dev/request-quote'">Request A Quote</router-link></li>
+          <li><router-link v-bind:to="'/request-quote'">Request A Quote</router-link></li>
         </ul>
         <div class="">
           <span><a href="mailto:info@4dlocalmovers.com?subject=Mail from 4D Local Movers App">info@4Dlocalmovers.com</a></span>

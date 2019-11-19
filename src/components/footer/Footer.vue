@@ -4,22 +4,22 @@
 			<div class="cell small-12 medium-6 footer-content">
 		        <p>Let us take care of your move while you focus on your move</p>
 		        <p>
-		          Request A <router-link v-bind:to="'/dev/request-quote'" @click.native="clickLink">Quote</router-link>
+		          Request A <router-link v-bind:to="'/request-quote'" @click.native="clickLink">Quote</router-link>
 		        </p>
 			</div>
 			<div class="cell small-12 medium-6">
 				<ul class="footer-link-container">
 					<li class="footer-link-nav">
-						<router-link v-bind:to="'/dev/services'" @click.native="clickLink">Service</router-link>
+						<router-link v-bind:to="'/services'" @click.native="clickLink">Service</router-link>
 					</li>
-					<li class="footer-link-nav"><router-link v-bind:to="'/dev/about-us'" @click.native="clickLink">About Us</router-link></li>
-					<li class="footer-link-nav"><router-link v-bind:to="'/dev/request-quote'" @click.native="clickLink">Quote</router-link></li>
+					<li class="footer-link-nav"><router-link v-bind:to="'/about-us'" @click.native="clickLink">About Us</router-link></li>
+					<li class="footer-link-nav"><router-link v-bind:to="'/request-quote'" @click.native="clickLink">Quote</router-link></li>
 				</ul>
 			</div>
 		</div>
 		<div class="social-icons">
-			<router-link v-bind:to="'/dev/about-us'" class="facebook"><span class="hide-text">Facebook</span></router-link>
-			<router-link v-bind:to="'/dev/about-us'" class="instagram"><span class="hide-text">Instagram</span></router-link>
+			<router-link v-bind:to="'/about-us'" class="facebook"><span class="hide-text">Facebook</span></router-link>
+			<router-link v-bind:to="'/about-us'" class="instagram"><span class="hide-text">Instagram</span></router-link>
 		</div>
 	    <div class="footer-bottom">
 	      <p>Serving from Mobile Al to Panama City Fla and areas in between</p>
@@ -115,7 +115,7 @@
 	}
 
 	.social-icons {
-		display: flex;
+		display: none;
 		justify-content: center;
 	}
 
