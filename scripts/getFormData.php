@@ -10,7 +10,7 @@ $app->post('/form', function () use ($app) {
     $host = $app->request->headers->get('Host');
     if($host === "4dlocalmovers.com") {
         $emailSubject = 'Customer Has a Question!';
-        $webMaster = 'ddyytsbv49cd@a2plcpnl0300.prod.iad2.secureserver.net';
+        $webMaster = 'info@4dlocalmovers.com';
         require './formBody.php';
         $headers = "Content-type: text/html\r\n";
         $success = mail($webMaster, $emailSubject, $body, $headers);
