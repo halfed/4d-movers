@@ -11,17 +11,17 @@
 		        <ul>
 	      			<li @click="toggleHandler">
 	      				<router-link 
-	      					v-bind:to="'/dev/services'"
+	      					v-bind:to="'/services'"
 	      				>Service Areas</router-link>
 	      			</li>
 	      			<li @click="toggleHandler">
 	      				<router-link 
-	      				v-bind:to="'/dev/about-us'"
+	      				v-bind:to="'/about-us'"
 	      			>About Us</router-link>
 	      			</li>
 	      			<li @click="toggleHandler">
 	      				<router-link 
-	      					v-bind:to="'/dev/request-quote'"
+	      					v-bind:to="'/request-quote'"
 	      				>Request A Quote</router-link>
 	      			</li>
 	      		</ul>
@@ -33,14 +33,14 @@
 	      		v-bind:class="[slideout ? 'is-open-left has-transition-push has-position-left' : '']"
 	      	>
 	      		<div class="cell large-6 medium-12 small-12">
-	      			<router-link v-bind:to="'/dev'" className="image-link">
+	      			<router-link v-bind:to="'/'" className="image-link">
 	      				<img src="../../assets/movers-logo.png">
 	      			</router-link>
 	      		</div>
 	      		<div class="cell large-6 medium-12 small-12">
 	      			<div class="menu-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
 				      	<button class="toggle-button" type="button" @click="toggleHandler">Menu</button>
-				      	<div class="title-bar-title"><router-link v-bind:to="'/dev/request-quote'" @click.native="clickLink">Request A Quote</router-link></div>
+				      	<div class="title-bar-title"><router-link v-bind:to="'/request-quote'" @click.native="clickLink">Request A Quote</router-link></div>
 				          <span>850-427-8800</span>
 				    </div>
 	      			<h1>4th DIMENSION PRO MOVERS</h1>

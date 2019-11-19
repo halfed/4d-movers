@@ -4,7 +4,7 @@ import HelloWorld from '@/components/HelloWorld';
 
 export default [
     {
-      path: '/dev/',
+      path: '/',
       component: Layout,
       meta: { auth: true },
       children: [
