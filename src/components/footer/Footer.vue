@@ -23,7 +23,6 @@
 		</div>
 	    <div class="footer-bottom">
 	      <p>Serving from Mobile Al to Panama City Fla and areas in between</p>
-	      <p>5053 Ring Rose Court Fl Gulf Breeze FL 32563 </p>
 	      <p class="left-inline-block"> Main (850) 427 8800</p>
 	      <a class="right-inline-block" href="mailto:info@4dlocalmovers.com?subject=Mail from 4D Local Movers App">info@4Dlocalmovers.com</a> </p>
 	      <p class="lower-font"><a href="https://app.termly.io/document/privacy-policy/46d47efe-0a29-4bc8-8ee1-35030bc5db76" target="_blank">Privacy Policy </a><span class="copy-format">&copy; 2019 4th Dimension Pro Movers</span></p>
