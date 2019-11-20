@@ -32,7 +32,9 @@ export default [
           name: 'RequestQuote',
           component: views.Quote,
           meta: { auth: true }
-        }
+        },
+        // catch all redirects that don't match redirect to home page
+        { path: '*', redirect: '/' }
       ]
     },
     
