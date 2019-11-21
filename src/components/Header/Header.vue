@@ -10,8 +10,8 @@
   		</div>
   		<div class="cell large-6 medium-12 small-12">
   			<div class="menu-bar" data-responsive-toggle="example-animated-menu" data-hide-for="medium">
-		      	<button class="toggle-button" type="button" @click="toggleHandler">Menu</button>
-		      	<div class="title-bar-title"><router-link v-bind:to="'/request-quote'" @click.native="clickLink">Request A Quote</router-link></div>
+		      	<button class="toggle-button" type="button" @click="toggleButton">Menu</button>
+		      	<div class="title-bar-title"><router-link v-bind:to="'/request-quote'">Request A Quote</router-link></div>
 		          <span>850-427-8800</span>
 		    </div>
   			<h1>4th DIMENSION PRO MOVERS</h1>
@@ -20,8 +20,27 @@
 	</header>
 </template>
 
+<script>
+	export default {
+		name: 'Header',
+		props:['slideout'],
+		methods: {
+			toggleButton() {
+				this.$emit('toggleButon');
+			}
+		}
+	}
+</script>
+
 
 <style lang="scss">
+	.title-bar-title a {
+		color: #FFFFFF;
+		text-decoration: underline;
+		top: -1px;
+    	position: relative;
+	}
+
 	.toggle-button {
 		color: #FFFFFF;
 		font-weight: 700;
